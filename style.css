@@ -4,6 +4,7 @@
     margin: 0;
     padding: 0;
     font-family: "Alata", sans-serif;
+    box-sizing: border-box;
 }
 
 ul {
@@ -13,8 +14,14 @@ ul {
 a { text-decoration: none; color: black; }
 
 :root {
-    --cor-principal: #3A5A40;
+    --cor-principal: #656D4A;
+    --cor-principal-hover: #3c451f;
+    --cor-secundaria: #A4AC86;
+    --cor-secundaria-hover: #8b9178;
+    --cor-terciaria: #C2C5AA;
 }
+
+/*---------HEADER----------*/
 
 .cabecalho {
     width: 100%;
@@ -23,7 +30,7 @@ a { text-decoration: none; color: black; }
     justify-content: space-around;
     align-items: center;
     background-color: var(--cor-principal);
-    box-shadow: 0px 4px 4px 0px #00000040;
+    box-shadow: 0px 8px 8px 0px #00000040;
 }
 
 #titulo {
@@ -40,20 +47,229 @@ a { text-decoration: none; color: black; }
     font-size: 24px;
 }
 
-.secao1 {
-    background-color: #DAD7CD;
-    height: 318px;
+.nav_link:hover {
+    transition: all 0.3s;
+    transform: scale(1.2);
 }
 
+.link:hover {
+    color: var(--cor-principal-hover);
+    transition: all 0.3s;
+}
+/*-------------------*/
+
+/*---------SEÇÃO 1 - IMAGEM/DESCRIÇÃO----------*/
+.secao1 {
+    background-color: var(--cor-secundaria);
+    display: flex;
+    justify-content:space-evenly;
+    align-items: center;
+    padding: 35.5px 0 30.75px 0;
+}
+
+
 .img_gabriel {
-    width: 247px;
+    width: 250px;
+    height: 250px;
     border-radius: 50%;
+    box-shadow: 4px 4px 4px 0px #00000040;
+}
+
+.img_gabriel:hover {
+    transition: ease-in 0.2s;
+    transform: scale(1.1);
+}
+
+.description_image {
+    width: 30%;
 }
 
 .subtitulo {
     font-size: 24px;
+    margin-bottom: 25px;
 }
 
 .subtitulo_descricao {
     font-size: 16px;
+}
+
+/*-------------------*/
+
+/*--------SEÇÃO 2 HOBBIES/TOP 5-----------*/
+.secao2 {
+    width: 100%;
+    background-color: var(--cor-terciaria);
+    padding-bottom: 20px;
+    min-height: 289px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 26px;
+}
+
+
+.hobbies {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin: 20px;
+}
+
+.hobbies_subtitulo {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.tier_subtitulo , .hobbies_subtitulo {
+    font-size: 24px;
+    margin-bottom: 26px;
+}
+
+.cards_hobbies , .cards_tier {
+    display: flex;
+    gap: 10px;
+}
+
+.cards_hobbies {justify-content: flex-end;}
+
+.card {
+    width: 103px;
+    height: 150px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    flex-direction: column-reverse;
+    background-size: cover;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+.card:hover {
+    transition: all 0.3s;
+    transform: scale(1.1);
+}
+
+.flamengo {background-image: url('assets/Flamengo\ Wallpaper\ _\ Papel\ de\ Parede.jpeg');}
+.filmes {background-image: url('assets/interstellar.jpg');}
+.esportes {background-image: url('assets/volei.jpg');}
+.series {background-image: url('assets/dark.jpg');}
+.jogos {background-image: url('assets/minecraft1.jpg');}
+
+.minecraft {background-image: url('assets/minecraft2.jpeg');}
+.satisfactory {background-image: url('assets/satisfactory.jpeg');}
+.dark_souls { background-image: url('assets/dark\ souls\ 3.jpg');}
+.elden_ring {background-image: url('assets/elden\ ring.jpg');}
+.lol {background-image: url('assets/lol.jpeg');}
+
+.nome_card {
+    padding-bottom: 18px;
+    font-size: 16px;
+    color: white;
+}
+
+.toptier {
+    flex-direction: column;
+}
+
+.pos_toptier {
+    position: relative;
+    top: 65px;
+}
+
+.ordem {
+    width: 19px;
+    height: 44px;
+    background-color: var(--cor-principal);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0 0 5px 5px;
+    position: relative;
+    right: 30px;
+}
+
+
+/*-------------------*/
+
+/*--------FOOTER-----------*/
+
+.redes_sociais {
+    background-color: var(--cor-principal);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.redes_sociais_nav {
+    padding: 19px 0px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.images_icons {
+    width: 32px;
+    background-color: white;
+    border-radius: 50%;
+    border: 1px solid transparent;
+}
+
+.images_icons:hover {
+    transform: scale(1.2);
+    transition: all 0.2s;
+    cursor: pointer;
+}
+
+.contato {
+    padding: 8px 16px;
+    background-color: var(--cor-secundaria);
+    border-radius: 5px;
+}
+
+.contato:hover {
+    transition: all 0.3s;
+    background-color: var(--cor-secundaria-hover);
+}
+
+/*-------------------*/
+
+/*---------TABLET E CELULARES----------*/
+
+@media (max-width: 1250px) {
+    .secao1 {
+        flex-direction: column;
+        gap: 33px;
+    }
+
+    .description_image {
+        width: 90%;
+    }
+
+    .secao2 {
+        flex-direction: column;
+    }
+
+    .hobbies_subtitulo {
+        justify-content: flex-start;
+    }
+
+    .tier_subtitulo {
+        margin: 20px 0 26px 20px;
+    }
+
+    .cards_hobbies , .cards_tier {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .secao2 {
+        padding-bottom: 32px;
+    }
+
+    .redes_sociais {
+        flex-direction: column-reverse;
+    }
+
+    .contato {
+        margin: 16px;
+    }
 }
