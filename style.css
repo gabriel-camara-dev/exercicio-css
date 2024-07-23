@@ -4,7 +4,7 @@
     margin: 0;
     padding: 0;
     font-family: "Alata", sans-serif;
-    box-sizing: border-box;
+
 }
 
 ul {
@@ -14,11 +14,11 @@ ul {
 a { text-decoration: none; color: black; }
 
 :root {
-    --cor-principal: #656D4A;
-    --cor-principal-hover: #3c451f;
-    --cor-secundaria: #A4AC86;
-    --cor-secundaria-hover: #8b9178;
-    --cor-terciaria: #C2C5AA;
+    --cor-principal: #3c6e71;
+    --cor-principal-hover: #7daab3;
+    --cor-secundaria: #7daab3;
+    --cor-secundaria-hover: #48a0a6;
+    --cor-terciaria: #ffffff;
 }
 
 /*---------HEADER----------*/
@@ -30,12 +30,16 @@ a { text-decoration: none; color: black; }
     justify-content: space-around;
     align-items: center;
     background-color: var(--cor-principal);
-    box-shadow: 0px 8px 8px 0px #00000040;
+    box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+}
+.dropdown-btn {
+    display: none;
 }
 
 #titulo {
     font-size: 35px;
 }
+
 
 .navegation {
     display: flex;
@@ -54,7 +58,7 @@ a { text-decoration: none; color: black; }
 
 .link:hover {
     color: var(--cor-principal-hover);
-    transition: all 0.3s;
+    transition: all 0.2s;
 }
 /*-------------------*/
 
@@ -100,7 +104,7 @@ a { text-decoration: none; color: black; }
     width: 100%;
     background-color: var(--cor-terciaria);
     padding-bottom: 20px;
-    min-height: 289px;
+    min-height: 305px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -178,7 +182,7 @@ a { text-decoration: none; color: black; }
 .ordem {
     width: 19px;
     height: 44px;
-    background-color: var(--cor-principal);
+    background-color: var(--cor-secundaria);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -235,6 +239,50 @@ a { text-decoration: none; color: black; }
 /*---------TABLET E CELULARES----------*/
 
 @media (max-width: 1250px) {
+    .cabecalho {
+       justify-content: space-between;
+       
+    }
+    #titulo {
+        margin-left: 30px;
+        font-size: 24px;
+    }
+    .dropdown {
+        padding-right: 50px;
+    }
+    .navegation {
+        display: none;
+        flex-direction: column;
+        background-color: var(--cor-principal);
+        gap: 0;
+        z-index: 10
+        
+    }
+    .dropdown-btn {
+        content: url('assets/menu-hamburguer.png');
+        display: block;
+        width: 30px;
+        -webkit-appearance: none;
+        position: relative;
+    }
+    .dropdown-btn:checked {
+        content: url('assets/cruz.png');
+        width: 31px;
+        top: 73px;
+        left: 87px;
+    }
+    .dropdown-btn:checked ~ .navegation {
+        display: block;
+        position: relative;
+        top: 110px;
+        left: 50px;
+        border-radius: 0px 5px 5px 5px;
+        box-shadow: 0px 8px 8px 0px #00000040;
+
+    }
+
+
+
     .secao1 {
         flex-direction: column;
         gap: 33px;
