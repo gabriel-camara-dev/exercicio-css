@@ -37,7 +37,7 @@ a { text-decoration: none; color: black; }
 }
 
 #titulo {
-    font-size: 35px;
+    font-size: 2.22rem;
 }
 
 
@@ -48,7 +48,7 @@ a { text-decoration: none; color: black; }
 
 .nav_link {
     padding: 8px 16px;
-    font-size: 24px;
+    font-size: 1.5rem;
 }
 
 .nav_link:hover {
@@ -89,12 +89,12 @@ a { text-decoration: none; color: black; }
 }
 
 .subtitulo {
-    font-size: 24px;
+    font-size: 1.5rem;
     margin-bottom: 25px;
 }
 
 .subtitulo_descricao {
-    font-size: 16px;
+    font-size: 1rem;
 }
 
 /*-------------------*/
@@ -125,7 +125,7 @@ a { text-decoration: none; color: black; }
 }
 
 .tier_subtitulo , .hobbies_subtitulo {
-    font-size: 24px;
+    font-size: 1.5rem;
     margin-bottom: 26px;
 }
 
@@ -166,7 +166,7 @@ a { text-decoration: none; color: black; }
 
 .nome_card {
     padding-bottom: 18px;
-    font-size: 16px;
+    font-size: 1rem;
     color: white;
 }
 
@@ -245,7 +245,7 @@ a { text-decoration: none; color: black; }
     }
     #titulo {
         margin-left: 30px;
-        font-size: 24px;
+        font-size: 1.5rem;
     }
     .dropdown {
         padding-right: 50px;
@@ -263,11 +263,12 @@ a { text-decoration: none; color: black; }
         display: block;
         width: 30px;
         -webkit-appearance: none;
-        position: relative;
+        
     }
     .dropdown-btn:checked {
         content: url('assets/cruz.png');
         width: 31px;
+        position: relative;
         top: 73px;
         left: 87px;
     }
@@ -279,8 +280,6 @@ a { text-decoration: none; color: black; }
         border-radius: 0px 5px 5px 5px;
         box-shadow: 0px 8px 8px 0px #00000040;
     }
-
-
 
     .secao1 {
         flex-direction: column;
@@ -318,5 +317,11 @@ a { text-decoration: none; color: black; }
 
     .contato {
         margin: 16px;
+    }
+}
+
+@media (max-width: 350px) {
+    #titulo {
+        font-size: 1.25rem;
     }
 }
